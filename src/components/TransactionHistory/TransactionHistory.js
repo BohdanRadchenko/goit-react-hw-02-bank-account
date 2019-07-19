@@ -27,7 +27,7 @@ const TransactionHistory = ({ transactions }) => {
 
 TransactionHistory.propTypes = {
   transactions: PropTypes.arrayOf(
-    PropTypes.shepe({
+    PropTypes.shape({
       id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,
       inputValue: PropTypes.string.isRequired,
