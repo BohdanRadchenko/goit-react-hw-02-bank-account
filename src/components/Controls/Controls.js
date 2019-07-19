@@ -1,22 +1,27 @@
+/*eslint-disable*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Controls.module.css';
 
-const Controls = () => {
+const Controls = ({
+  hendleGetValue,
+  hendleDeposits,
+  hendleWithdrow,
+  inputValue,
+}) => {
   return (
     <section className={styles.controls}>
       <input
         className={styles.input}
         type="number"
-        // value={value}
         name="value"
-        // placeholder="title"
-        onChange={this.hendleSubmt}
+        onChange={e => hendleGetValue(e)}
+        value={inputValue}
       />
-      <button type="button" onCklick={this.hendleDeposits}>
+      <button type="button" onClick={hendleDeposits}>
         Deposit
       </button>
-      <button type="button" onCklick={this.hendleWithdrow}>
+      <button type="button" onClick={hendleWithdrow}>
         Withdraw
       </button>
     </section>
