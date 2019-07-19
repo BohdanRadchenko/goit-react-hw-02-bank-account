@@ -1,16 +1,10 @@
-/*eslint-disable*/
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import Dashboard from './Dashboard/Dashboard';
 
-class App extends Component {
-  state = {};
-  render() {
-    return (
-      <div>
-        <p>App</p>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <>
+    <Dashboard />
+  </>
+);
 
 export default App;
