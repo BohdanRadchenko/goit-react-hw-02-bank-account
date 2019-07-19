@@ -16,8 +16,8 @@ const Balance = ({ balance, summDeposits, summWithdrow }) => (
 
 Balance.propTypes = {
   balance: PropTypes.number.isRequired,
-  summDeposits: PropTypes.string.isRequired,
-  summWithdrow: PropTypes.string.isRequired,
+  summDeposits: PropTypes.number.isRequired,
+  summWithdrow: PropTypes.number.isRequired,
 };
 
 export default Balance;
