@@ -1,7 +1,7 @@
-/*eslint-disable*/
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import shortid from 'shortid';
+import 'react-toastify/dist/ReactToastify.css';
+import transactionAlert from '../transactionAlert';
 import Controls from '../Controls/Controls';
 import Balance from '../Balance/Balance';
 import TansactionHistory from '../TransactionHistory/TransactionHistory';
@@ -52,7 +52,7 @@ class Dashboard extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     const { transactions } = this.state;
-    if (prevState.transactions !== this.state.transactions) {
+    if (prevState.transactions !== transactions) {
       this.setState({
         balance: stateSum(transactions).balance,
         deposits: stateSum(transactions).deposits,
@@ -86,7 +86,7 @@ class Dashboard extends Component {
   };
 
   hendleWithdrow = () => {
-    const { inputValue, balance, transactions } = this.state;
+    const { inputValue, balance } = this.state;
     const numberValue = Number(inputValue);
     if (balance >= numberValue) {
       const createObj = {
@@ -104,17 +104,6 @@ class Dashboard extends Component {
     }
   };
 
-  test = () => {
-    const { transactions } = this.state;
-    const stateS = stateSum(transactions);
-    this.setState({
-      balance: stateS.balance,
-      deposits: stateS.deposits,
-      withdrow: stateS.withdrow,
-    });
-    console.log(this.state);
-  };
-
   resetInput = () => {
     this.setState({
       inputValue: '',
@@ -129,9 +118,6 @@ class Dashboard extends Component {
       transactions,
       inputValue,
     } = this.state;
-    const showDeposits = stateSum(transactions);
-    console.log(showDeposits);
-
     return (
       <div>
         <Controls
