@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Controls.module.css';
@@ -27,5 +26,12 @@ const Controls = ({
       </button>
     </section>
   );
+};
+
+Controls.propTypes = {
+  hendleGetValue: PropTypes.func.isRequired,
+  hendleDeposits: PropTypes.func.isRequired,
+  hendleWithdrow: PropTypes.func.isRequired,
+  inputValue: PropTypes.string.isRequired,
 };
 export default Controls;

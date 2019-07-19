@@ -1,5 +1,5 @@
-/*eslint-disable*/
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './TransactionHistory.module.css';
 
 const TransactionHistory = ({ transactions }) => {
@@ -23,6 +23,17 @@ const TransactionHistory = ({ transactions }) => {
       </tbody>
     </table>
   );
+};
+
+TransactionHistory.propTypes = {
+  transactions: PropTypes.arrayOf(
+    PropTypes.shepe({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      inputValue: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
 };
 
 export default TransactionHistory;

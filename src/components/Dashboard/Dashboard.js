@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React, { Component } from 'react';
 import shortid from 'shortid';
 import 'react-toastify/dist/ReactToastify.css';

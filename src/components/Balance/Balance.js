@@ -1,5 +1,5 @@
-/*eslint-disable*/
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Balance.module.css';
 
 const Balance = ({ balance, summDeposits, summWithdrow }) => (
@@ -13,5 +13,11 @@ const Balance = ({ balance, summDeposits, summWithdrow }) => (
     <span> Balance: {balance} $</span>
   </section>
 );
+
+Balance.propTypes = {
+  balance: PropTypes.number.isRequired,
+  summDeposits: PropTypes.string.isRequired,
+  summWithdrow: PropTypes.string.isRequired,
+};
 
 export default Balance;
