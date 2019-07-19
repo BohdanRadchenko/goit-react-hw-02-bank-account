@@ -7,6 +7,7 @@ import transactionAlert from '../transactionAlert';
 import Controls from '../Controls/Controls';
 import Balance from '../Balance/Balance';
 import TansactionHistory from '../TransactionHistory/TransactionHistory';
+import styles from './Dashboard.module.css';
 
 const stateSum = items => {
   const depositsArr = items.filter(el => el.type === 'Deposits');
@@ -123,7 +124,7 @@ class Dashboard extends Component {
       inputValue,
     } = this.state;
     return (
-      <div>
+      <div className={styles.deshboard}>
         <Controls
           inputValue={inputValue}
           hendleGetValue={this.hendleGetValue}
@@ -131,11 +132,15 @@ class Dashboard extends Component {
           hendleWithdrow={this.hendleWithdrow}
         />
         <Balance
+          className={styles.controls}
           balance={balance}
           summDeposits={deposits}
           summWithdrow={withdrow}
         />
-        <TansactionHistory transactions={transactions} />
+        <TansactionHistory
+          className={styles.transactions}
+          transactions={transactions}
+        />
         <ToastContainer closeButton={false} />
       </div>
     );
