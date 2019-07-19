@@ -8,8 +8,6 @@ import Controls from '../Controls/Controls';
 import Balance from '../Balance/Balance';
 import TansactionHistory from '../TransactionHistory/TransactionHistory';
 
-import styles from './Dashboard.module.css';
-
 const stateSum = items => {
   const depositsArr = items.filter(el => el.type === 'Deposits');
   const depositsSumm = depositsArr.reduce(
