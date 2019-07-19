@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-02-blank-account/static/css/main.4406401c.chunk.css",
-    "main.js": "/goit-react-hw-02-blank-account/static/js/main.3e936b7f.chunk.js",
-    "main.js.map": "/goit-react-hw-02-blank-account/static/js/main.3e936b7f.chunk.js.map",
+    "main.css": "/goit-react-hw-02-blank-account/static/css/main.0eec7d83.chunk.css",
+    "main.js": "/goit-react-hw-02-blank-account/static/js/main.d8bd047c.chunk.js",
+    "main.js.map": "/goit-react-hw-02-blank-account/static/js/main.d8bd047c.chunk.js.map",
     "runtime~main.js": "/goit-react-hw-02-blank-account/static/js/runtime~main.5d2dd279.js",
     "runtime~main.js.map": "/goit-react-hw-02-blank-account/static/js/runtime~main.5d2dd279.js.map",
     "static/css/2.39017165.chunk.css": "/goit-react-hw-02-blank-account/static/css/2.39017165.chunk.css",
-    "static/js/2.d224b9f1.chunk.js": "/goit-react-hw-02-blank-account/static/js/2.d224b9f1.chunk.js",
-    "static/js/2.d224b9f1.chunk.js.map": "/goit-react-hw-02-blank-account/static/js/2.d224b9f1.chunk.js.map",
+    "static/js/2.68666373.chunk.js": "/goit-react-hw-02-blank-account/static/js/2.68666373.chunk.js",
+    "static/js/2.68666373.chunk.js.map": "/goit-react-hw-02-blank-account/static/js/2.68666373.chunk.js.map",
     "index.html": "/goit-react-hw-02-blank-account/index.html",
-    "precache-manifest.1f868888725e4cc250448cf619380871.js": "/goit-react-hw-02-blank-account/precache-manifest.1f868888725e4cc250448cf619380871.js",
+    "precache-manifest.c7be1e8514836b19203824ce6b23e210.js": "/goit-react-hw-02-blank-account/precache-manifest.c7be1e8514836b19203824ce6b23e210.js",
     "service-worker.js": "/goit-react-hw-02-blank-account/service-worker.js",
     "static/css/2.39017165.chunk.css.map": "/goit-react-hw-02-blank-account/static/css/2.39017165.chunk.css.map",
-    "static/css/main.4406401c.chunk.css.map": "/goit-react-hw-02-blank-account/static/css/main.4406401c.chunk.css.map"
+    "static/css/main.0eec7d83.chunk.css.map": "/goit-react-hw-02-blank-account/static/css/main.0eec7d83.chunk.css.map"
   }
 }
