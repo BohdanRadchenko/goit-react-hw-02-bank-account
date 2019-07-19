@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
 import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import transactionAlert from '../transactionAlert';
 import Controls from '../Controls/Controls';
 import Balance from '../Balance/Balance';
@@ -80,15 +81,18 @@ class Dashboard extends Component {
         transactions: [...state.transactions, createObj],
       }));
       this.resetInput();
+      toast.success(transactionAlert.success);
     } else {
-      alert('Incorrect number');
+      toast.error(transactionAlert.incorrectValue);
     }
   };
 
   hendleWithdrow = () => {
     const { inputValue, balance } = this.state;
     const numberValue = Number(inputValue);
-    if (balance >= numberValue) {
+    if (numberValue <= 0) {
+      toast.error(transactionAlert.incorrectValue);
+    } else if (balance >= numberValue) {
       const createObj = {
         id: shortid.generate(),
         date: new Date().toLocaleString(),
@@ -99,8 +103,9 @@ class Dashboard extends Component {
         transactions: [...state.transactions, createObj],
       }));
       this.resetInput();
+      toast.success(transactionAlert.success);
     } else {
-      alert('So close');
+      toast.error(transactionAlert.noMoney);
     }
   };
 
@@ -132,6 +137,7 @@ class Dashboard extends Component {
           summWithdrow={withdrow}
         />
         <TansactionHistory transactions={transactions} />
+        <ToastContainer closeButton={false} />
       </div>
     );
   }

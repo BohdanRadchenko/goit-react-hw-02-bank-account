@@ -16,6 +16,7 @@ const Controls = ({
         type="number"
         name="value"
         onChange={e => hendleGetValue(e)}
+        placeholder="0"
         value={inputValue}
       />
       <button type="button" onClick={hendleDeposits}>
